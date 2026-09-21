@@ -1,0 +1,370 @@
+/* Markus Langer — Stylesheet
+   Farben, Schriftgrößen und Abstände stehen hier zentral.
+   Wer etwas am Aussehen ändern will, ändert es in dieser Datei. */
+
+:root {
+  --grund: #F4F6F6;        /* Seitenhintergrund */
+  --text: #1A2430;         /* Fließtext und Überschriften */
+  --gedaempft: #566270;    /* Datums- und Quellenangaben */
+  --linie: #D5DBDF;        /* Trennlinien */
+  --akzent: #1D5C63;       /* Links */
+  --akzent-dunkel: #123E43;
+  --platzhalter-rand: #8C9BA3;
+  --platzhalter-flaeche: #E7ECED;
+  --platzhalter-text: #3F4C57;
+
+  --serif: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --rand: 80px;            /* seitlicher Abstand */
+  --breite: 1120px;        /* maximale Inhaltsbreite */
+  --lesebreite: 68ch;      /* maximale Breite für Fließtext */
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--grund);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+a { color: var(--akzent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--akzent);
+  outline-offset: 3px;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; margin: 0; }
+h1 { font-size: clamp(38px, 6vw, 68px); line-height: 1.05; letter-spacing: -0.01em; }
+h2 { font-size: clamp(26px, 3.4vw, 34px); line-height: 1.15; }
+h3 { font-size: clamp(20px, 2.4vw, 24px); line-height: 1.25; font-weight: 500; }
+
+p { margin: 0 0 1em; max-width: var(--lesebreite); }
+p:last-child { margin-bottom: 0; }
+
+/* Gerüst ------------------------------------------------------------- */
+
+.innen {
+  max-width: var(--breite);
+  margin: 0 auto;
+  padding-left: var(--rand);
+  padding-right: var(--rand);
+}
+
+.abschnitt {
+  padding-top: 72px;
+  padding-bottom: 72px;
+  border-top: 1px solid var(--linie);
+}
+
+.abschnitt > h2 { margin-bottom: 28px; }
+
+/* Kopfbereich -------------------------------------------------------- */
+
+.kopf {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.marke {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--text);
+}
+
+.menue {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 15px;
+}
+
+.menue a,
+.menue span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--text);
+}
+
+.menue [aria-current="page"] {
+  font-weight: 600;
+  box-shadow: inset 0 -2px 0 var(--akzent);
+}
+
+.menue .bald {           /* Seite existiert noch nicht */
+  color: var(--gedaempft);
+}
+
+.sprachen { display: flex; gap: 4px; }
+.sprachen a {
+  justify-content: center;
+  min-width: 44px;
+}
+.sprachen .aktiv { font-weight: 600; }
+.sprachen .inaktiv { color: var(--gedaempft); }
+
+/* Einstieg ----------------------------------------------------------- */
+
+.einstieg {
+  padding-top: 56px;
+  padding-bottom: 8px;
+}
+.einstieg h1 { margin-bottom: 24px; }
+
+
+
+.knopfreihe { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+
+.knopf {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border: 1.5px solid var(--akzent);
+  font-weight: 600;
+  color: var(--akzent);
+}
+.knopf:hover { background: var(--akzent); color: #fff; text-decoration: none; }
+
+/* Listen ------------------------------------------------------------- */
+
+.liste { display: flex; flex-direction: column; }
+
+.eintrag {
+  padding: 18px 0;
+  border-top: 1px solid var(--linie);
+}
+.eintrag .titel { font-family: var(--serif); font-size: 21px; line-height: 1.35; }
+.eintrag .quelle { margin-top: 4px; font-size: 15px; color: var(--gedaempft); }
+
+.saeulen { display: flex; flex-direction: column; gap: 44px; }
+.auswahl-label {
+  margin: 20px 0 12px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gedaempft);
+}
+.saeule .publikationen {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: var(--lesebreite);
+}
+.saeule .publikationen li {
+  font-size: 15px;
+  line-height: 1.5;
+  padding-left: 16px;
+  border-left: 2px solid var(--linie);
+}
+.saeule .publikationen .notiz { color: var(--gedaempft); font-style: italic; }
+.saeule { padding-top: 20px; border-top: 1px solid var(--linie); }
+.saeule h3 { margin-bottom: 10px; }
+.saeule p { font-size: 16px; }
+
+.themenblock { display: flex; flex-direction: column; gap: 40px; }
+.themenblock h3 { margin-bottom: 4px; }
+
+.weiter { display: inline-flex; align-items: center; min-height: 44px; margin-top: 12px; }
+
+/* Profilspalte links, auf allen Seiten -------------------------------- */
+
+.seite {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  column-gap: 56px;
+  align-items: start;
+}
+.seite > main > .innen {
+  max-width: none;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.profilspalte {
+  position: sticky;
+  top: 28px;
+  padding-top: 48px;
+}
+.profilspalte img {
+  width: 100%;
+  max-width: 190px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+.foto-nachweis { margin: 7px 0 0; font-size: 14px; color: var(--gedaempft); }
+.profil-rolle {
+  margin: 18px 0 0;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--gedaempft);
+}
+.profil-links {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.profil-links li { display: flex; align-items: center; gap: 9px; }
+.profil-links svg {
+  flex: 0 0 auto;
+  width: 17px;
+  height: 17px;
+  color: var(--gedaempft);
+}
+
+/* Aktuelles auf der Startseite ---------------------------------------- */
+
+.aktuell-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: var(--lesebreite);
+}
+.aktuell-liste li {
+  line-height: 1.6;
+}
+
+/* Platzhalter -------------------------------------------------------- */
+
+.platzhalter {
+  border: 1px dashed var(--platzhalter-rand);
+  background: var(--platzhalter-flaeche);
+  color: var(--platzhalter-text);
+  padding: 14px 18px;
+  font-size: 16px;
+  max-width: var(--lesebreite);
+}
+
+.platzhalter-bild {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 300px;
+  max-width: none;
+}
+
+.platzhalter-klein {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 15px;
+}
+
+/* Fußbereich --------------------------------------------------------- */
+
+.fuss {
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+  flex-wrap: wrap;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  border-top: 1px solid var(--linie);
+  font-size: 15px;
+  color: var(--gedaempft);
+}
+.fuss .name { font-family: var(--serif); font-size: 20px; color: var(--text); }
+.fuss-links { display: flex; gap: 24px; flex-wrap: wrap; }
+.fuss-links a { display: inline-flex; align-items: center; min-height: 44px; }
+
+/* Kleine Bildschirme -------------------------------------------------- */
+
+@media (max-width: 900px) {
+  :root { --rand: 24px; }
+  .seite { grid-template-columns: 1fr; row-gap: 8px; }
+  .profilspalte { position: static; padding-top: 32px; max-width: 300px; }
+  .einstieg { padding-top: 32px; }
+  .abschnitt { padding-top: 48px; padding-bottom: 48px; }
+  .menue { gap: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* Unterseiten --------------------------------------------------------- */
+
+.seitenkopf {
+  padding-top: 56px;
+  padding-bottom: 64px;
+}
+.seitenkopf h1 { margin-bottom: 20px; }
+.seitenkopf .einleitung { display: flex; flex-direction: column; gap: 16px; max-width: var(--lesebreite); }
+.seitenkopf p { font-size: 18px; line-height: 1.7; }
+
+/* Zeile mit Jahr, Sache und Ort oder Quelle */
+.zeile {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr) 320px;
+  column-gap: 24px;
+  align-items: baseline;
+  padding: 18px 0;
+  border-top: 1px solid var(--linie);
+}
+.zeile:last-child { border-bottom: 1px solid var(--linie); }
+
+/* Liste ohne eigene Spalte für Ort oder Quelle: alles steht links untereinander */
+.liste.schmal .zeile { grid-template-columns: 120px minmax(0, 1fr); }
+.liste.einspaltig .zeile { grid-template-columns: minmax(0, 1fr); }
+.liste.schmal .zeile .wo,
+.liste.einspaltig .zeile .wo {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--sans);
+}
+.zeile .notiz {
+  margin: 10px 0 0;
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--gedaempft);
+  max-width: var(--lesebreite);
+}
+.zeile .wann { font-size: 15px; color: var(--gedaempft); }
+.zeile .was { font-family: var(--serif); font-size: 20px; line-height: 1.35; }
+.zeile .wo { font-size: 15px; color: var(--gedaempft); }
+
+/* Zeile ohne Jahr, etwa für Hinweise */
+.zeile.schlicht {
+  display: block;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .zeile {
+    grid-template-columns: 1fr;
+    row-gap: 4px;
+  }
+  .zeile .wann { order: -1; }
+  .seitenkopf { padding-top: 32px; padding-bottom: 40px; }
+}
