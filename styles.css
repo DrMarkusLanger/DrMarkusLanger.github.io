@@ -3,12 +3,12 @@
    Wer etwas am Aussehen ändern will, ändert es in dieser Datei. */
 
 :root {
-  --grund: #F4F6F6;        /* Seitenhintergrund */
-  --text: #1A2430;         /* Fließtext und Überschriften */
-  --gedaempft: #566270;    /* Datums- und Quellenangaben */
-  --linie: #D5DBDF;        /* Trennlinien */
-  --akzent: #1D5C63;       /* Links */
-  --akzent-dunkel: #123E43;
+  --grund: #FFFFFF;        /* Seitenhintergrund */
+  --text: #14161A;         /* Fließtext und Überschriften */
+  --gedaempft: #5A5F6B;    /* Datums- und Quellenangaben */
+  --linie: #E3E5E9;        /* Trennlinien */
+  --akzent: #344A9A;       /* Links, Blau aus dem Psy:Tech-Logo */
+  --akzent-dunkel: #26386F;
   --platzhalter-rand: #8C9BA3;
   --platzhalter-flaeche: #E7ECED;
   --platzhalter-text: #3F4C57;
