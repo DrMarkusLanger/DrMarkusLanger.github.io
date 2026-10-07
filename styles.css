@@ -382,3 +382,73 @@ p:last-child { margin-bottom: 0; }
   .zeile .wann { order: -1; }
   .seitenkopf { padding-top: 32px; padding-bottom: 40px; }
 }
+
+/* Handy: Burger-Menü und kompakte Seitenleiste ------------------------- */
+
+.menue-knopf { display: none; }
+
+@media (max-width: 900px) {
+  .kopf { flex-wrap: wrap; gap: 0; padding-top: 12px; padding-bottom: 12px; }
+  .hat-js .menue-knopf {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-right: -10px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--text);
+    cursor: pointer;
+  }
+  .menue-knopf svg { width: 24px; height: 24px; }
+  .menue-knopf .icon-zu { display: none; }
+  .offen .menue-knopf .icon-auf { display: none; }
+  .offen .menue-knopf .icon-zu { display: block; }
+
+  .hat-js .menue { display: none; }
+  .menue {
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin-top: 8px;
+    font-size: 16px;
+  }
+  .hat-js.offen .menue { display: flex; }
+  .menue > a { border-top: 1px solid var(--linie); }
+  .menue [aria-current="page"] { box-shadow: none; color: var(--akzent); }
+  .sprachen { border-top: 1px solid var(--linie); }
+  .sprachen a { justify-content: flex-start; min-width: 0; margin-right: 20px; }
+
+  .profilspalte {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    column-gap: 16px;
+    align-items: start;
+    max-width: none;
+    padding-top: 16px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--linie);
+  }
+  .profilspalte > img { grid-column: 1; grid-row: 1 / 3; max-width: 72px; }
+  .profil-rolle { grid-column: 2; grid-row: 1; margin: 0; font-size: 14px; }
+  .foto-nachweis { grid-column: 2; grid-row: 2; margin-top: 4px; font-size: 12px; }
+  .profil-links {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px 18px;
+    margin-top: 14px;
+  }
+  .profil-links li { min-height: 32px; }
+  .profil-logo {
+    grid-column: 1 / -1;
+    justify-self: start;
+    margin-top: 12px;
+    padding-top: 0;
+    border-top: 0;
+  }
+  .profilspalte .profil-logo img { width: 84px; }
+}

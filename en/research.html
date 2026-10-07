@@ -11,7 +11,8 @@
 
 <header class="kopf innen">
   <a class="marke" href="index.html">Markus Langer</a>
-  <nav class="menue" aria-label="Main menu">
+  <button class="menue-knopf" type="button" aria-expanded="false" aria-controls="hauptmenue" aria-label="Menu"><svg class="icon-auf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="icon-zu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <nav class="menue" id="hauptmenue" aria-label="Main menu">
     <a href="index.html">About me</a>
     <a href="research.html" aria-current="page">Research and Publications</a>
     <a href="public.html">Public Engagement</a>
@@ -136,5 +137,6 @@
   <div>© 2026 Markus Langer</div>
 </footer>
 
+<script src="../menue.js"></script>
 </body>
 </html>
