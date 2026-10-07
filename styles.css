@@ -238,6 +238,15 @@ p:last-child { margin-bottom: 0; }
   color: var(--gedaempft);
 }
 
+.profil-logo {
+  display: inline-block;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--linie);
+}
+.profilspalte .profil-logo img { width: 110px; aspect-ratio: auto; object-fit: contain; }
+.profil-logo:hover { opacity: 0.75; }
+
 /* Aktuelles auf der Startseite ---------------------------------------- */
 
 .aktuell-liste {
@@ -320,6 +329,11 @@ p:last-child { margin-bottom: 0; }
 .seitenkopf h1 { margin-bottom: 20px; }
 .seitenkopf .einleitung { display: flex; flex-direction: column; gap: 16px; max-width: var(--lesebreite); }
 .seitenkopf p { font-size: 18px; line-height: 1.7; }
+
+/* Lab-Logo auf der Forschungsseite */
+.lab-logo { display: inline-block; margin-top: 40px; }
+.lab-logo img { width: 220px; }
+.lab-logo:hover { opacity: 0.75; }
 
 /* Zeile mit Jahr, Sache und Ort oder Quelle */
 .zeile {
