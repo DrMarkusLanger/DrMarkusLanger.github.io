@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://markuslanger.eu/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://markuslanger.eu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://markuslanger.eu/en/"/>
+  </url>
+  <url>
+    <loc>https://markuslanger.eu/en/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://markuslanger.eu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://markuslanger.eu/en/"/>
+  </url>
+  <url>
+    <loc>https://markuslanger.eu/forschung.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://markuslanger.eu/forschung.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://markuslanger.eu/en/research.html"/>
+  </url>
+  <url>
+    <loc>https://markuslanger.eu/en/research.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://markuslanger.eu/forschung.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://markuslanger.eu/en/research.html"/>
+  </url>
+  <url>
+    <loc>https://markuslanger.eu/oeffentlichkeit.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://markuslanger.eu/oeffentlichkeit.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://markuslanger.eu/en/public.html"/>
+  </url>
+  <url>
+    <loc>https://markuslanger.eu/en/public.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://markuslanger.eu/oeffentlichkeit.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://markuslanger.eu/en/public.html"/>
+  </url>
+  <url>
+    <loc>https://markuslanger.eu/lehre.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://markuslanger.eu/lehre.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://markuslanger.eu/en/teaching.html"/>
+  </url>
+  <url>
+    <loc>https://markuslanger.eu/en/teaching.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://markuslanger.eu/lehre.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://markuslanger.eu/en/teaching.html"/>
+  </url>
+  <url>
+    <loc>https://markuslanger.eu/community.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://markuslanger.eu/community.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://markuslanger.eu/en/awards.html"/>
+  </url>
+  <url>
+    <loc>https://markuslanger.eu/en/awards.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://markuslanger.eu/community.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://markuslanger.eu/en/awards.html"/>
+  </url>
+  <url>
+    <loc>https://markuslanger.eu/cv.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://markuslanger.eu/cv.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://markuslanger.eu/en/cv.html"/>
+  </url>
+  <url>
+    <loc>https://markuslanger.eu/en/cv.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://markuslanger.eu/cv.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://markuslanger.eu/en/cv.html"/>
+  </url>
+</urlset>
