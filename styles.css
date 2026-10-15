@@ -252,6 +252,21 @@ p:last-child { margin-bottom: 0; }
 .aktuell-liste li {
   line-height: 1.6;
 }
+/* Eintrag mit kleinem Bild (z. B. Buchcover) links neben dem Text */
+.aktuell-liste li.mit-bild {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  column-gap: 20px;
+  align-items: center;
+}
+.aktuell-liste li.mit-bild img {
+  width: 120px;
+  box-shadow: 0 2px 10px rgba(20, 22, 26, 0.15);
+}
+@media (max-width: 900px) {
+  .aktuell-liste li.mit-bild { grid-template-columns: 88px minmax(0, 1fr); column-gap: 16px; }
+  .aktuell-liste li.mit-bild img { width: 88px; }
+}
 
 /* Platzhalter -------------------------------------------------------- */
 
